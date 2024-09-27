@@ -28,12 +28,16 @@ fun DependencyHandler.androidUiPack() {
     implementation(Deps.composeIconsExtended)
     implementation(Deps.composeConstraintLayout)
     implementation(Deps.composeRuntime)
+    implementation(Deps.composeReimagined)
 }
 fun DependencyHandler.room(){
     implementation(Deps.roomRuntime)
     annotationProcessor(Deps.roomCompiler)
     kapt(Deps.roomCompiler)
     implementation(Deps.roomKtx)
+}
+fun DependencyHandler.lottie() {
+    implementation(Deps.lottie)
 }
 
 fun DependencyHandler.androidTest() {
@@ -67,6 +71,7 @@ fun DependencyHandler.coroutines() {
 fun DependencyHandler.hilt() {
     implementation(Deps.hiltAndroid)
     kapt(Deps.hiltCompiler)
+    implementation(Deps.hiltNavCompose)
 }
 fun DependencyHandler.implementation(depName: Any) {
     add("implementation", depName)

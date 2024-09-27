@@ -42,8 +42,8 @@ object Deps {
     const val composeMaterial3 = "androidx.compose.material3:material3:$material3Version"
     const val composeMaterial3WindowSize =
         "androidx.compose.material3:material3-window-size-class:$material3Version"
-
-
+    const val composeReimagined = "dev.olshevski.navigation:reimagined-material3:1.5.0"
+    const val lottie = "com.airbnb.android:lottie-compose:5.2.0"
     //test
     const val jUnit = "junit:junit:$jUnitVersion"
     const val jupiter = "org.junit.jupiter:junit-jupiter:$jupiterVersion"
@@ -72,6 +72,7 @@ object Deps {
     //Hilt
     val hiltAndroid = "com.google.dagger:hilt-android:$hiltVersion"
     val hiltCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    val hiltNavCompose = "androidx.hilt:hilt-navigation-compose:1.2.0"
 
     val kotlinKapt = "kotlin-kapt"
     val daggerHilt = "com.google.dagger.hilt.android"

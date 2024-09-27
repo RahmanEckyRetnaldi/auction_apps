@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="failed_connect_to_server">Failed connect to server</string>
+</resources>

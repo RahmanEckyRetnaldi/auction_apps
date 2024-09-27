@@ -22,3 +22,5 @@ dependencyResolutionManagement {
 rootProject.name = "Task App"
 include(":app")
 include(":core")
+include(":feat")
+include(":feat:auction")

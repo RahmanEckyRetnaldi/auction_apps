@@ -1,21 +1,14 @@
-import com.rer.buildsrc.Deps
-import com.rer.buildsrc.coroutines
 import com.rer.buildsrc.featureModule
-import com.rer.buildsrc.hilt
-import com.rer.buildsrc.lottie
-import com.rer.buildsrc.uiModule
 
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
-    id("kotlin-parcelize")
-
 }
 
 android {
-    namespace = "com.rer.core"
+    namespace = "com.rer.auction"
     compileSdk = 34
 
     defaultConfig {
@@ -34,13 +27,6 @@ android {
             )
         }
     }
-
-    buildFeatures {
-        compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -48,13 +34,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-
-
 }
 
 dependencies {
-    uiModule()
-    coroutines()
-    hilt()
-    lottie()
+    featureModule()
 }
