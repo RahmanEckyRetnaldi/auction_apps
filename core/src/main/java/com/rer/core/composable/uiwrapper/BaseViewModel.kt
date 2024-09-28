@@ -17,6 +17,8 @@ abstract class ViewModelWrapper<STATE:State, EVENT, INTENT>(
     val state: StateFlow<STATE> = _state.asStateFlow()
     val currentState: STATE get() = state.value
 
+    abstract fun onIntent(intent: INTENT)
+
     protected fun updateState(update:(old: STATE) -> STATE): STATE = _state.updateAndGet(update)
 
     //UI Event

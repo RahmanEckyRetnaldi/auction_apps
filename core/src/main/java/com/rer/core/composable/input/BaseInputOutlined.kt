@@ -50,7 +50,7 @@ data class BaseInputOutlinedData(
     val enabled: Boolean = true,
     val readOnly: Boolean = false,
     val digitOnly: Boolean = false,
-    val isDeniedSpecialChar: Boolean = true,
+    val isDeniedSpecialChar: Boolean = false,
     val disabledTextColor: Color? = null,
     val keyboardActions: KeyboardActions = KeyboardActions.Default,
     val onValueChange: (String) -> Unit,
