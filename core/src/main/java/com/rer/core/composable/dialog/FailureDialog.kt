@@ -9,7 +9,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -22,6 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.rer.core.R
+import com.rer.core.composable.label.CustomText
 
 @Composable
 fun FailureDialog(
@@ -41,7 +41,7 @@ fun FailureDialog(
                         contentDescription = "",
                         modifier = Modifier.padding(16.dp)
                     )
-                    Text(
+                    CustomText(
                         text = failureMessage,
                         color = MaterialTheme.colorScheme.onSurface,
                         style = MaterialTheme.typography.bodyMedium,
@@ -60,7 +60,7 @@ fun FailureDialog(
                             .height(80.dp)
                             .padding(16.dp),
                     ) {
-                        Text(
+                        CustomText(
                             style = MaterialTheme.typography.bodyMedium,
                             color = Color.White,
                             text = "OK"
