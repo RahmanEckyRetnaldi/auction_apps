@@ -18,7 +18,7 @@ import kotlinx.coroutines.flow.Flow
 inline fun <reified ViewModel : ViewModelWrapper<State, Event, Intent>, State, Event, Intent> UIStateWrapper(
     viewModel: ViewModel = hiltViewModel(),
     crossinline event: (Flow<Event>, CoroutineScope) -> Unit,
-    crossinline content: @Composable (viewModel: ViewModel, state: State) -> Unit
+    crossinline content: @Composable (viewModel: ViewModel, state: State, (Intent)->Unit) -> Unit
 ) {
     //init
     val state: State? by viewModel.state.collectAsStateWithLifecycle()
@@ -32,7 +32,7 @@ inline fun <reified ViewModel : ViewModelWrapper<State, Event, Intent>, State, E
 
     //build screen content
     state?.let { st ->
-        content(viewModel, st)
+        content(viewModel, st, viewModel::onIntent)
     }
 
     //show Loading
