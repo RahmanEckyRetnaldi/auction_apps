@@ -7,6 +7,8 @@ fun DependencyHandler.uiModule() {
     androidUiPack()
     androidxLifecycle()
     androidTest()
+    androidAccompanist()
+
 }
 
 fun DependencyHandler.featureModule() {
@@ -14,8 +16,18 @@ fun DependencyHandler.featureModule() {
     coroutines()
     hilt()
     implementation(project(":core"))
+    implementation(project(":feat:auction"))
 }
-
+fun DependencyHandler.androidAccompanist() {
+    implementation(Deps.accompanistPager)
+    implementation(Deps.accompanistPagerIndicator)
+    implementation(Deps.accompanistSystemUiController)
+    implementation(Deps.accompanistDrawablePainter)
+    implementation(Deps.accompanistFlowLayout)
+    implementation(Deps.accompanistPermission)
+    implementation(Deps.accompanistWebView)
+    implementation(Deps.accompanistSwipeRefresh)
+}
 
 fun DependencyHandler.androidUiPack() {
     implementation(Deps.coreKtx)
@@ -62,6 +74,7 @@ fun DependencyHandler.androidxLifecycle() {
     implementation(Deps.lifecycleCommon)
     implementation(Deps.lifecycleLiveData)
     implementation(Deps.workRuntime)
+    implementation(Deps.kotlinxSerialization)
 }
 
 fun DependencyHandler.coroutines() {

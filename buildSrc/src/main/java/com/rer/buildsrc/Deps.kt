@@ -1,6 +1,7 @@
 package com.rer.buildsrc
 
 object Deps {
+    const val kotlinVersion = "1.9.0"
     private const val composeVersion = "1.5.0-rc01"
     private const val material3Version = "1.1.1"
     private const val jUnitVersion = "4.13.2"
@@ -12,6 +13,7 @@ object Deps {
     private const val coilVersion = "2.5.0"
     const val kotlinCompilerExtensionVersion = "1.5.3"
     private const val pagingVersion = "3.2.1"
+    private const val accompanistVersion = "0.25.1"
     private const val googleTruthVersion = "1.4.2"
     private const val kotlinxSerializationVersion = "1.6.3"
     private const val hiltVersion = "2.51.1"
@@ -59,6 +61,23 @@ object Deps {
     const val jUnit5Vintage = "org.junit.vintage:junit-vintage-engine:5.10.0"
     const val cashAppTurbine = "app.cash.turbine:turbine:1.1.0"
 
+    //acommpaist
+    const val accompanistPager = "com.google.accompanist:accompanist-pager:$accompanistVersion"
+    const val accompanistPagerIndicator =
+        "com.google.accompanist:accompanist-pager-indicators:$accompanistVersion"
+    const val accompanistSystemUiController =
+        "com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion"
+    const val accompanistDrawablePainter =
+        "com.google.accompanist:accompanist-drawablepainter:$accompanistVersion"
+    const val accompanistFlowLayout =
+        "com.google.accompanist:accompanist-flowlayout:$accompanistVersion"
+    const val accompanistPermission =
+        "com.google.accompanist:accompanist-permissions:$accompanistVersion"
+    const val accompanistWebView = "com.google.accompanist:accompanist-webview:$accompanistVersion"
+    const val accompanistSwipeRefresh =
+        "com.google.accompanist:accompanist-swiperefresh:$accompanistVersion"
+
+
 
     //ROOM DB
     const val roomCompiler = "androidx.room:room-compiler:$room_version"
@@ -73,8 +92,5 @@ object Deps {
     val hiltAndroid = "com.google.dagger:hilt-android:$hiltVersion"
     val hiltCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
     val hiltNavCompose = "androidx.hilt:hilt-navigation-compose:1.2.0"
-
-    val kotlinKapt = "kotlin-kapt"
-    val daggerHilt = "com.google.dagger.hilt.android"
 
 }
