@@ -1,7 +1,6 @@
 package com.rer.buildsrc
 
 object Deps {
-    const val kotlinVersion = "1.9.0"
     private const val composeVersion = "1.5.0-rc01"
     private const val material3Version = "1.1.1"
     private const val jUnitVersion = "4.13.2"
@@ -12,11 +11,11 @@ object Deps {
     private const val jupiterVersion = "5.8.1"
     private const val coilVersion = "2.5.0"
     const val kotlinCompilerExtensionVersion = "1.5.3"
-    private const val pagingVersion = "3.2.1"
     private const val accompanistVersion = "0.25.1"
     private const val googleTruthVersion = "1.4.2"
     private const val kotlinxSerializationVersion = "1.6.3"
     private const val hiltVersion = "2.51.1"
+    private const val retrofitVersion = "2.9.0"
 
 
     //Core
@@ -46,6 +45,7 @@ object Deps {
         "androidx.compose.material3:material3-window-size-class:$material3Version"
     const val composeReimagined = "dev.olshevski.navigation:reimagined-material3:1.5.0"
     const val lottie = "com.airbnb.android:lottie-compose:5.2.0"
+
     //test
     const val jUnit = "junit:junit:$jUnitVersion"
     const val jupiter = "org.junit.jupiter:junit-jupiter:$jupiterVersion"
@@ -77,13 +77,6 @@ object Deps {
     const val accompanistSwipeRefresh =
         "com.google.accompanist:accompanist-swiperefresh:$accompanistVersion"
 
-
-
-    //ROOM DB
-    const val roomCompiler = "androidx.room:room-compiler:$room_version"
-    const val roomRuntime = "androidx.room:room-runtime:$room_version"
-    const val roomKtx = "androidx.room:room-ktx:$room_version"
-
     //Coroutine
     val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
     val coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
@@ -92,5 +85,13 @@ object Deps {
     val hiltAndroid = "com.google.dagger:hilt-android:$hiltVersion"
     val hiltCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
     val hiltNavCompose = "androidx.hilt:hilt-navigation-compose:1.2.0"
+
+    //Coil
+    const val coil = "io.coil-kt:coil-compose:$coilVersion"
+
+    //Retrofit
+    const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    const val logingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.1"
+    const val converterRetrofit = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
 }

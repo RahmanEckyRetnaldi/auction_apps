@@ -8,7 +8,7 @@ fun DependencyHandler.uiModule() {
     androidxLifecycle()
     androidTest()
     androidAccompanist()
-
+    coilImage()
 }
 
 fun DependencyHandler.featureModule() {
@@ -18,6 +18,7 @@ fun DependencyHandler.featureModule() {
     implementation(project(":core"))
     implementation(project(":feat:auction"))
 }
+
 fun DependencyHandler.androidAccompanist() {
     implementation(Deps.accompanistPager)
     implementation(Deps.accompanistPagerIndicator)
@@ -42,12 +43,7 @@ fun DependencyHandler.androidUiPack() {
     implementation(Deps.composeRuntime)
     implementation(Deps.composeReimagined)
 }
-fun DependencyHandler.room(){
-    implementation(Deps.roomRuntime)
-    annotationProcessor(Deps.roomCompiler)
-    kapt(Deps.roomCompiler)
-    implementation(Deps.roomKtx)
-}
+
 fun DependencyHandler.lottie() {
     implementation(Deps.lottie)
 }
@@ -67,6 +63,7 @@ fun DependencyHandler.androidTest() {
     testRuntimeOnly(Deps.jUnit5Vintage)
     testImplementation(Deps.cashAppTurbine)
 }
+
 fun DependencyHandler.androidxLifecycle() {
     implementation(Deps.lifecycleRuntime)
     implementation(Deps.lifecycleRuntimeCompose)
@@ -81,11 +78,27 @@ fun DependencyHandler.coroutines() {
     implementation(Deps.coroutineCore)
     implementation(Deps.coroutineAndroid)
 }
+
+fun DependencyHandler.coilImage() {
+    implementation(Deps.coil)
+}
+
 fun DependencyHandler.hilt() {
     implementation(Deps.hiltAndroid)
     kapt(Deps.hiltCompiler)
     implementation(Deps.hiltNavCompose)
 }
+
+fun DependencyHandler.retrofit() {
+    implementation(Deps.retrofit)
+    implementation(Deps.logingInterceptor)
+    retrofitConverter()
+}
+
+fun DependencyHandler.retrofitConverter() {
+    implementation(Deps.converterRetrofit)
+}
+
 fun DependencyHandler.implementation(depName: Any) {
     add("implementation", depName)
 }
