@@ -7,38 +7,22 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.rer.auction.domain.entity.ChatEntity
-import com.rer.auction.presentation.auction.AuctionState
-import com.rer.auction.presentation.auction.ui.AuctionView
 import com.rer.core.ui.theme.AppTheme
+import com.rer.core.utils.NavigationDestination
+import com.rer.taskapp.navigation.AppNavigationGraph
 import dagger.hilt.android.AndroidEntryPoint
+import dev.olshevski.navigation.reimagined.rememberNavController
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            val navController = rememberNavController<NavigationDestination>(
+                startDestination = NavigationDestination.Auction()
+            )
             AppTheme {
-                AuctionView(
-                    state = AuctionState().copy(
-                        liveChats = listOf(
-                            ChatEntity(
-                                user = "Rer",
-                                message = "Hello"
-                            ),
-                            ChatEntity(
-                                user = "Rer",
-                                message = "Hello"
-                            ),
-                            ChatEntity(
-                                user = "Rer",
-                                message = "Hello"
-                            )
-                        )
-                    )
-                )
-
-
+                AppNavigationGraph(navController = navController)
             }
         }
     }

@@ -24,13 +24,14 @@ data class CustomScaffoldParam(
     val fab: @Composable () -> Unit = {},
     val fabPosition: FabPosition = FabPosition.End
 )
+
 @Composable
 fun DesignScaffold(
     showAppBar: Boolean = false,
     appBar: (@Composable () -> Unit)? = null,
     body: @Composable () -> Unit,
     bottomView: @Composable () -> Unit = {},
-    background: @Composable () -> Unit = {},
+    background: (@Composable () -> Unit)? = {},
     padding: Dp = defaultPadding,
     param: CustomScaffoldParam = CustomScaffoldParam(),
 ) {
@@ -44,10 +45,12 @@ fun DesignScaffold(
                     .padding(it)
                     .background(MaterialTheme.colorScheme.background)
             ) {
-                background.invoke()
+                background?.invoke()
                 Column(
                     modifier = if (param.ignoreNavPadding) Modifier
-                        .fillMaxSize() else Modifier.fillMaxSize().navigationBarsPadding()
+                        .fillMaxSize() else Modifier
+                        .fillMaxSize()
+                        .navigationBarsPadding()
                 ) {
                     if (!showAppBar) {
                         Spacer(modifier = Modifier.windowInsetsTopHeight(WindowInsets.safeDrawing))

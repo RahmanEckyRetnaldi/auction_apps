@@ -15,7 +15,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 
 @Composable
-inline fun <reified ViewModel : ViewModelWrapper<State, Event, Intent>, State, Event, Intent> UIStateWrapper(
+inline fun <reified ViewModel : BaseViewModel<State, Event, Intent>, State, Event, Intent> UIStateWrapper(
     viewModel: ViewModel = hiltViewModel(),
     crossinline event: (Flow<Event>, CoroutineScope) -> Unit,
     crossinline content: @Composable (viewModel: ViewModel, state: State, (Intent)->Unit) -> Unit
@@ -47,7 +47,7 @@ inline fun <reified ViewModel : ViewModelWrapper<State, Event, Intent>, State, E
         FailureDialog(
             failureMessage = responseState.messageByErrorCode(),
             onDismissed = {
-
+               viewModel.setStatusResponse()
             }
         )
     }

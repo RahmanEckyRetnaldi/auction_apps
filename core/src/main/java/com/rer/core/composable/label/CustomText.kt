@@ -17,6 +17,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import com.rer.core.ui.theme.errorLight
 
+
+@Suppress("kotlin:S107")
 @Composable
 fun CustomText(
     text: String,
