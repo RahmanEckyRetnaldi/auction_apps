@@ -1,6 +1,6 @@
-import com.rer.buildsrc.Deps
 import com.rer.buildsrc.coroutines
 import com.rer.buildsrc.hilt
+import com.rer.buildsrc.retrofit
 import com.rer.buildsrc.uiModule
 
 plugins {
@@ -51,4 +51,5 @@ dependencies {
     coroutines()
     hilt()
     implementation(project(":core"))
+    retrofit()
 }
