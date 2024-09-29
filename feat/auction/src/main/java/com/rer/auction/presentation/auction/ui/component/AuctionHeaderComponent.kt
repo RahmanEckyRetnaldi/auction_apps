@@ -11,9 +11,13 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsTopHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
@@ -46,12 +50,13 @@ fun AuctionHeaderComponent(modifier: Modifier = Modifier) {
         ),
         label = stringResource(R.string.live_auction_blink_label),
     )
+    Spacer(modifier = Modifier.windowInsetsTopHeight(WindowInsets.safeDrawing))
     Row(
         modifier = modifier.then(
             Modifier
                 .fillMaxWidth()
                 .wrapContentSize()
-                .padding(defaultPadding)
+                .padding(horizontal = defaultPadding)
         ), verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
@@ -70,7 +75,7 @@ fun AuctionHeaderComponent(modifier: Modifier = Modifier) {
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Image(
-                    painter = painterResource(id = R.drawable.profile_placeholder),
+                    painter = painterResource(id = com.rer.core.R.drawable.profile_placeholder),
                     contentDescription = stringResource(R.string.profile_image_desc),
                     modifier = Modifier
                         .size(40.dp)
