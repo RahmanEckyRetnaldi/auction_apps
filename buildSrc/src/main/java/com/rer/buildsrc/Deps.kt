@@ -7,14 +7,14 @@ object Deps {
     private const val testRunnerVersion = "1.5.1"
     private const val rulesVersion = "1.4.0"
     private const val lifecycleVersion = "2.5.1"
-    private const val room_version = "2.6.1"
     private const val jupiterVersion = "5.8.1"
     private const val coilVersion = "2.5.0"
     const val kotlinCompilerExtensionVersion = "1.5.3"
-    private const val pagingVersion = "3.2.1"
+    private const val accompanistVersion = "0.25.1"
     private const val googleTruthVersion = "1.4.2"
     private const val kotlinxSerializationVersion = "1.6.3"
     private const val hiltVersion = "2.51.1"
+    private const val retrofitVersion = "2.9.0"
 
 
     //Core
@@ -44,6 +44,7 @@ object Deps {
         "androidx.compose.material3:material3-window-size-class:$material3Version"
     const val composeReimagined = "dev.olshevski.navigation:reimagined-material3:1.5.0"
     const val lottie = "com.airbnb.android:lottie-compose:5.2.0"
+
     //test
     const val jUnit = "junit:junit:$jUnitVersion"
     const val jupiter = "org.junit.jupiter:junit-jupiter:$jupiterVersion"
@@ -59,14 +60,24 @@ object Deps {
     const val jUnit5Vintage = "org.junit.vintage:junit-vintage-engine:5.10.0"
     const val cashAppTurbine = "app.cash.turbine:turbine:1.1.0"
 
-
-    //ROOM DB
-    const val roomCompiler = "androidx.room:room-compiler:$room_version"
-    const val roomRuntime = "androidx.room:room-runtime:$room_version"
-    const val roomKtx = "androidx.room:room-ktx:$room_version"
+    //acommpaist
+    const val accompanistPager = "com.google.accompanist:accompanist-pager:$accompanistVersion"
+    const val accompanistPagerIndicator =
+        "com.google.accompanist:accompanist-pager-indicators:$accompanistVersion"
+    const val accompanistSystemUiController =
+        "com.google.accompanist:accompanist-systemuicontroller:$accompanistVersion"
+    const val accompanistDrawablePainter =
+        "com.google.accompanist:accompanist-drawablepainter:$accompanistVersion"
+    const val accompanistFlowLayout =
+        "com.google.accompanist:accompanist-flowlayout:$accompanistVersion"
+    const val accompanistPermission =
+        "com.google.accompanist:accompanist-permissions:$accompanistVersion"
+    const val accompanistWebView = "com.google.accompanist:accompanist-webview:$accompanistVersion"
+    const val accompanistSwipeRefresh =
+        "com.google.accompanist:accompanist-swiperefresh:$accompanistVersion"
 
     //Coroutine
-    val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core: "
     val coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
 
     //Hilt
@@ -74,7 +85,12 @@ object Deps {
     val hiltCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
     val hiltNavCompose = "androidx.hilt:hilt-navigation-compose:1.2.0"
 
-    val kotlinKapt = "kotlin-kapt"
-    val daggerHilt = "com.google.dagger.hilt.android"
+    //Coil
+    const val coil = "io.coil-kt:coil-compose:$coilVersion"
+
+    //Retrofit
+    const val retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    const val logingInterceptor = "com.squareup.okhttp3:logging-interceptor:4.9.1"
+    const val converterRetrofit = "com.squareup.retrofit2:converter-gson:$retrofitVersion"
 
 }

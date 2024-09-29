@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="streaming_placeholder">streaming placeholder</string>
+    <string name="live_auction_header">Live Auction Header Title</string>
+    <string name="profile_image_desc">profile image description</string>
+    <string name="name_placeholder">John Doe</string>
+    <string name="type_your_message_here">Type your message here...</string>
+    <string name="live_auction_blink_label">live_auction_blink</string>
+    <string name="bid_now">Bid Now</string>
+    <string name="input_amount_bid">Input Amount Bid</string>
+    <string name="bid_history">Bid History</string>
+    <string name="bid_time_is_over">Bid time is over</string>
+</resources>

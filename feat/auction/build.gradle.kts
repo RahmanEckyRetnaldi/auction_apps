@@ -1,10 +1,14 @@
-import com.rer.buildsrc.featureModule
+import com.rer.buildsrc.coroutines
+import com.rer.buildsrc.hilt
+import com.rer.buildsrc.retrofit
+import com.rer.buildsrc.uiModule
 
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
+    kotlin("plugin.serialization") version "1.9.0"
 }
 
 android {
@@ -34,8 +38,18 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
 }
 
 dependencies {
-    featureModule()
+    uiModule()
+    coroutines()
+    hilt()
+    implementation(project(":core"))
+    retrofit()
 }

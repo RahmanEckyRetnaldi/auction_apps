@@ -1,8 +1,7 @@
-import com.rer.buildsrc.Deps
 import com.rer.buildsrc.coroutines
-import com.rer.buildsrc.featureModule
 import com.rer.buildsrc.hilt
 import com.rer.buildsrc.lottie
+import com.rer.buildsrc.retrofit
 import com.rer.buildsrc.uiModule
 
 plugins {
@@ -11,6 +10,7 @@ plugins {
     id("kotlin-kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
+    kotlin("plugin.serialization") version "1.9.0"
 
 }
 
@@ -48,6 +48,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    externalNativeBuild {
+        cmake {
+            path = file("src/main/cpp/CMakeLists.txt")
+        }
+    }
 
 
 }
@@ -57,4 +62,5 @@ dependencies {
     coroutines()
     hilt()
     lottie()
+    retrofit()
 }
