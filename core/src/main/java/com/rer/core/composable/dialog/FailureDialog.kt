@@ -19,7 +19,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.window.Dialog
 import com.rer.core.R
 import com.rer.core.composable.label.CustomText
 
@@ -31,7 +30,9 @@ fun FailureDialog(
     val isDismissed = remember { mutableStateOf(false) }
 
     if (!isDismissed.value) {
-        Dialog(onDismissRequest = {}) {
+        BaseDialog(
+            onDismiss = { isDismissed.value = true },
+        ) {
             Surface(
                 shape = RoundedCornerShape(10.dp)
             ) {
