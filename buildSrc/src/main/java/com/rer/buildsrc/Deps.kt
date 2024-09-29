@@ -7,7 +7,6 @@ object Deps {
     private const val testRunnerVersion = "1.5.1"
     private const val rulesVersion = "1.4.0"
     private const val lifecycleVersion = "2.5.1"
-    private const val room_version = "2.6.1"
     private const val jupiterVersion = "5.8.1"
     private const val coilVersion = "2.5.0"
     const val kotlinCompilerExtensionVersion = "1.5.3"
@@ -78,7 +77,7 @@ object Deps {
         "com.google.accompanist:accompanist-swiperefresh:$accompanistVersion"
 
     //Coroutine
-    val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4"
+    val coroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core: "
     val coroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4"
 
     //Hilt
