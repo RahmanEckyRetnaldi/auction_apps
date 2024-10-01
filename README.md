@@ -54,7 +54,7 @@ This is Task app for personal project demo.
 - App: Main entry point of the application, ties together other modules, and manages global configurations.
 - buildSrc: Centralized dependency management for consistent and easy-to-maintain library versions and build scripts.
 - core: Global utilities, networking, dependency injection, and reusable components that are shared across modules.
-- feat: Contains individual feature auction modules that follow clean architecture with separation between data, domain, and presentation layers.
+- feat: Contains individual feature like auction modules that follow clean architecture with separation between data, domain, and presentation layers.
 
 ## Notes
   for The data api just dummy not real, i just generate using free access from
